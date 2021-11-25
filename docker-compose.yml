@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  mongo:
+    image: "mongo:latest"
+    ports: 
+      - "27017:27017"
+  trades-node-api: 
+    environment:
+      - mongoHost=mongo
+    build: ./../trades-server
+    ports: 
+      - "3001:3000"
+  
