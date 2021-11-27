@@ -4,10 +4,10 @@ services:
     image: "mongo:latest"
     ports: 
       - "27017:27017"
-  trades-node-api: 
+  trades-graphql-apollo-server: 
     environment:
       - mongoHost=mongo
-    build: ./../trades-server
+    build: ./../trades-graphql-apollo-server
     ports: 
-      - "3001:3000"
+      - "4000:4000"
   
